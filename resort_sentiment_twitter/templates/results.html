@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ski Weekend Optimizer</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+
+<h2>Your ski resort destination:</h2>
+<div>{{ content }}</div>
+
+<br><br>
+<h2>Prediction Based on Average of Twitter Sentiment:</h2>
+<div>
+  Live Twitter data indicates this resort is currently <strong>{{ prediction }}</strong>
+	<br>(probability: {{ probability }}%).
+ </div>
+
+<br><br>
+<h2>Live Twitter Data and Individual Tweet Predictions:</h2>
+<div>
+  {% for table in tables %}
+    {{ table|safe }}
+  {% endfor %}
+</div>
+
+
+<!--
+<div id='button'>
+	  <form action="/thanks" method="post">
+	    <input type=submit value='Correct' name='feedback_button'>
+		<input type=submit value='Incorrect' name='feedback_button'>
+		<input type=hidden value='{{ prediction }}' name='prediction'>
+		<input type=hidden value='{{ content }}' name='review'>
+	  </form>
+</div>
+-->
+
+<div id='button'>
+	  <form action="/">
+	    <input type=submit value='Check another ski resort'>
+	  </form>
+</div>
+
+  </body>
+</html>
