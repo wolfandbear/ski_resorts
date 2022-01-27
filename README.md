@@ -12,10 +12,6 @@ This project is a personal learning project that explores sentiment analysis.
   <img src="/SkiResortClassifier.png" width="600" />
 </p>
 
-<p float="left">
-  <img src="/SkiResortClassifier2.png" width="600" />
-</p>
-
 ### Screenshots of WebApp2:
 <p float="left">
   <img src="/SkiResortSentiment.png" width="600" />
